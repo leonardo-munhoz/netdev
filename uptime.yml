@@ -5,7 +5,7 @@
 
   tasks:
     - name: Get pwd
-      command: ls /root/.ssh/
+      command: ls /root/
       register: ls
 
     - name: Print local
