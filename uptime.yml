@@ -4,11 +4,11 @@
     - localhost
 
   tasks:
-    - name: Get host uptime
-      command: uptime
-      register: uptime
+    - name: Get pwd
+      command: pwd
+      register: pwd
 
-    - name: Print host uptime locally
+    - name: Print local
       debug:
-        var: uptime
+        var: pwd
 ...
