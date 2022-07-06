@@ -1,0 +1,13 @@
+---
+
+- name: SHOW RUNNING-CONFIG
+  gather_facts: false
+  tasks:
+  - name: EXECUTANDO...
+    ios_command:
+       commands:
+        - show running-config
+
+    register: print_output
+
+  - debug: var=print_output.stdout_lines
