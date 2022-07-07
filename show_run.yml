@@ -8,9 +8,9 @@
     ios_command:
        commands:
         - show running-config
-       register: ls
+       register: show
 
-   - name: Print local
+   - name: Print show run
       debug:
-        var: ls
+        var: show
 ...
