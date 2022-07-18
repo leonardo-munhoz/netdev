@@ -2,13 +2,9 @@
 - name: SHOW RUNNING-CONFIG
   hosts: all
   gather_facts: false
-  collections:
-- ansible.netcommon
-- cisco.iosxr
 
   tasks:
-  - name: EXECUTANDO...
-    ios_command:
-       commands:
-        - show running-config
+    - name: run show version on remote devices
+    ansible.netcommon.cli_command:
+    command: show version
 ...
