@@ -1,16 +1,13 @@
 ---
 
-- name: SHOW RUNNING-CONFIG
-  hosts: all
-  gather_facts: false
-  tasks:
-  - name: EXECUTANDO...
-    ios_command:
-       commands:
-        - show running-config
-       register: show
+---
 
-   - name: Print show run
-      debug:
-        var: show
-...
+- name: command testing
+  hosts: all
+  gather_facts: no
+
+  tasks:
+
+    # Get CLI raw text output for a given command
+    - nxos_command: command='show run'
+ ...
