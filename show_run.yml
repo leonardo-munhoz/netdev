@@ -2,9 +2,10 @@
 - name: command testing
   hosts: all
   gather_facts: no
+  connection: network_cli
 
   tasks:
 
     # Get CLI raw text output for a given command
-    - nxos_command: command='show run'
+    - commands: 'show run'
 ...
