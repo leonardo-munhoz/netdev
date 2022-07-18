@@ -3,8 +3,8 @@
   hosts: all
     
   tasks:
-    - name: Get pwd
-      command: ls /root/
+    - name: Get ls
+      command: ls
       register: ls
 
     - name: Print local
