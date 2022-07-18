@@ -2,6 +2,10 @@
 - name: SHOW RUNNING-CONFIG
   hosts: all
   gather_facts: false
+  collections:
+- ansible.netcommon
+- cisco.iosxr
+
   tasks:
   - name: EXECUTANDO...
     ios_command:
