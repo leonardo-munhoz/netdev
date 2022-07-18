@@ -4,10 +4,9 @@
   gather_facts: no
   connection: network_cli
 
-  tasks:
-
- # Get CLI raw text output for a given command
-   ios_command:
+ tasks:
+  - name: EXECUTANDO...
+    ios_command:
        commands:
         - show running-config
 ...
