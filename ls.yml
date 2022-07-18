@@ -1,0 +1,14 @@
+---
+- name: uptime.yml
+  hosts:
+    - localhost
+
+  tasks:
+    - name: Get pwd
+      command: ls /root/
+      register: ls
+
+    - name: Print local
+      debug:
+        var: ls
+...
