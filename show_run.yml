@@ -1,7 +1,4 @@
 ---
-
----
-
 - name: command testing
   hosts: all
   gather_facts: no
