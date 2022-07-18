@@ -1,13 +1,9 @@
 ---
-- hosts: all
-  gather_facts: false
-  connection: ansible.netcommon.network_cli
 
+- name: Network Getting Started First Playbook
+  connection: ansible.netcommon.network_cli
+  gather_facts: false
+  hosts: all
   tasks:
-    - name: Run cli_command on Arista and display results
-      block:
-      - name: Run cli_command on Arista
-        ansible.netcommon.cli_command:
-          command: show ip int br
-        register: result
+   - commands: show run
 ...
