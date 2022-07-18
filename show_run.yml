@@ -6,6 +6,8 @@
 
   tasks:
 
-    # Get CLI raw text output for a given command
-    - commands: 'show run'
+ # Get CLI raw text output for a given command
+   ios_command:
+       commands:
+        - show running-config
 ...
