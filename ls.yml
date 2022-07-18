@@ -1,8 +1,7 @@
 ---
 - name: uptime.yml
-  hosts:
-    - localhost
-
+  hosts: all
+    
   tasks:
     - name: Get pwd
       command: ls /root/
