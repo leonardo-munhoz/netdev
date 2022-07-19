@@ -1,9 +1,10 @@
 ---
-
-ansible_connection: ansible.netcommon.network_cli
-ansible_network_os: cisco.nxos.nxos
-
-- name: run show version on remote devices
-  cisco.nxos.nxos_command:
-    commands: show version
-...
+  - hosts: all
+    gather_facts: false
+    
+    tasks:
+      - name: verify underlay
+          commands:
+            - show ip ospf neighbors
+            - show ip bgp sum
+ ...
