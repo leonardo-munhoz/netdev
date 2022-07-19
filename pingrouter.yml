@@ -4,7 +4,6 @@
   hosts: all
   gather_facts: false
   tasks:
-  - name: ADICIONANDO ACL PARA O MAGICFLEX!!!
     ios_command:
        commands:
         - show access-list line_vty_in
