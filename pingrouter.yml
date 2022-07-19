@@ -1,6 +1,5 @@
 ---
 
-- name: ACL
   hosts: all
   gather_facts: false
   tasks:
