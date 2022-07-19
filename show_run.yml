@@ -1,9 +1,11 @@
 ---
-
-- name: SHOW RUNNING-CONFIG
-  hosts: all
-  gather_facts: false    
+- name: show version
+  hosts: nxos
+  gather_facts: false
   tasks:
-   - name: run show version on remote devices
-     cisco.nxos.nxos_command: show version
-...     
+    - name: show version
+      cisco.nxos.nxos_command:
+        commands: show version
+      register: output
+    -  debug: var=output.stdout_lines
+...
