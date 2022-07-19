@@ -1,3 +1,5 @@
- - name: Test reachability to 8.8.8.8
-   nxos_ping:
-     dest: 8.8.8.8
+- name: Test reachability to 8.8.8.8 using mgmt vrf
+  cisco.nxos.nxos_ping:
+    dest: 8.8.8.8
+    vrf: internet-agpod
+    host: 191.252.158.65
