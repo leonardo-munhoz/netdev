@@ -1,6 +1,6 @@
 ---
 - name: show version
-  hosts: nxos
+  hosts: all
   gather_facts: false
   tasks:
     - name: show version
