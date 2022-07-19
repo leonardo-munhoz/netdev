@@ -1,7 +1,8 @@
-
-
-
-
+---
+  hosts: all
+  gather_facts: false
+  tasks:
+  
 - name: Test reachability to 8.8.8.8
   nxos_ping:
     dest: 8.8.8.8
