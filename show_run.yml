@@ -3,9 +3,11 @@
   hosts: all
   gather_facts: false
   tasks:
-    - name: show version
+    - name: Run command on remote device
       cisco.nxos.nxos_command:
         commands: show version
-      register: output
-    -  debug: var=output.stdout_lines
+      register: results
+    - name: Show results
+      debug:
+        msg: "{{ results.stdout_lines }}"
 ...
