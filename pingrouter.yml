@@ -1,5 +1,13 @@
 ---
+
+- name: ACL
   hosts: all
-  gather_facts: no
-  
-...
+  gather_facts: false
+  tasks:
+  - name: ADICIONANDO ACL PARA O MAGICFLEX!!!
+    ios_command:
+       commands:
+        - show access-list line_vty_in
+    register: print_output
+
+  - debug: var=print_output.stdout_lines
